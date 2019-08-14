@@ -34,4 +34,11 @@ public class UserController {
         return "test";
     }
 
+    @RequestMapping(value = "/ftlTest", method = RequestMethod.GET)
+    public String ftlTest(ModelMap m) {
+        User user = userService.getUserById("7ae034dd7eaa442bbf7241ce9ab6f575");
+        m.addAttribute("user", user);
+        return "test";
+    }
+
 }
